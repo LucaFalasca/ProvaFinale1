@@ -3,4 +3,3 @@ jdk:
     -openjdk15
 script: 
     -ant build
-    -sonar-scanner
