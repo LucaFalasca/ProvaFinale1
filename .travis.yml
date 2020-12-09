@@ -1,10 +1,14 @@
 language: java
+install: ant deps
 jdk:
     -openjdk15
+dist: xenial
     addons:
       sonarcloud:
         organization: "lucafalasca"
         token:
           secure: "5d96ecaf001006a3c7885608471b6b5bb4b7e753" # encrypted value of your token
 
-script: ant build
+script: 
+    - ant build
+    - sonar-scanner
