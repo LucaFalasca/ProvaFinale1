@@ -1,4 +1,11 @@
 language: java
 jdk:
     -openjdk15
-script: ant build
+    
+    addons:
+        sonacloud:
+            organization: LucaFalasca
+            token: 3e8faeeda763ef4bb766c5b329c2554a8b09854f
+script: 
+    -ant build
+    -sonar-scanner
